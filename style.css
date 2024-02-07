@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300 & display=swap');
+
+body{
+    background-color: rgb(29, 29, 29);
+    height: 100vh;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    font-family: inter;
+    font-size: 16px;
+    font-family: inter;
+}
+
+@keyframes identifier {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: #ccc;
+    }
+}
+
+.container-chat{
+    height: 80%;
+    width: 450px ;
+    background-color: f7f7f7;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    border-radius: 10px;
+    animation: fadeIn 5s;
+    
+}
+
+.content-chat{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+
+  .container-chat::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 6px;
+  }
+ 
+  .container-chat::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+    border-radius: 6px;
+  }
+
+  .container-chat::-webkit-scrollbar{
+    width: 12px;
+  }
+
+}
+
+.message-chat{
+   background-color: wheat;
+   display: grid;
+   grid-template-columns: 70% auto;
+   align-items: center;
+   padding-left: 10px;
+   padding-right: 50px;
+   justify-content: center;
+   border-radius: 5px;
+   
+}
+#text-message{
+    font-family: inter ;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10;
+}
+.content-message{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 15px;
+    margin-top: 25px;
+    gap: 20px;
+    
+}
+
+.img-user{
+    width: 50px;
+    border-radius: 50% ;
+    margin-top: 10px;
+}
+.message{
+    font-size: 12px;
+    font-weight:400 ;
+    margin: 0;
+}
+.other-message{
+    background-color:hsl(160, 33%, 98%) ;
+    border-bottom: solid 1px rgb(197, 245, 241);
+}
+
+.me-message{
+    flex-direction: row-reverse;
+    background-color: rgb(177, 233, 175);
+    border-radius: 10px;
+    text-align: right;
+}
+.p-other{
+    font-weight: 300;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        background-color: transparent;
+    }
+    .container-chat{
+        border: solid 1px #ccc;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+ body{
+    margin: 0;
+ }
+ .container-chat{
+    height: 100%;
+    width: 100%;
+ }
+}
+
+.img-user{
+    width: 40px;
+}
